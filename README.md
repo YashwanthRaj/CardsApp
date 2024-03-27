@@ -1,2 +1,2 @@
 # CardsApp
-Mobile application based in iOS platform.
+Mobile application based on iOS platform.
