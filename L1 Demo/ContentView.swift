@@ -9,59 +9,56 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-
+        
         ZStack{
-            Color(.systemBlue)
-                .ignoresSafeArea()
+            Image("background-plain")
             
-            VStack(alignment: .leading, spacing: 10.0) {
+            VStack{
+                Spacer()
+                Spacer()
+                Image("logo")
                 
-                Image("niagarafalls")
-                    .resizable()
-                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fit/*@END_MENU_TOKEN@*/)
-                    .cornerRadius(15)
-                
-                HStack {
-                    Text("Niagara Falls")
-                        .font(.title)
-                        .fontWeight(.semibold)
-                    
-                    Spacer()
-                    
-                    VStack{
-                        
-                        HStack{
-                            Image(systemName: "star.fill")
-                            Image(systemName: "star.fill")
-                            Image(systemName: "star.fill")
-                            Image(systemName: "star.fill")
-                            Image(systemName:"star.leadinghalf.fill")
-                        }
-                        .foregroundColor(.orange)
-                        
-                        Text("(Reviews 241)")
-                    }
-                    .font(.caption)
-                    
-                }
-                
-                Text("Come visit in summer, spring and winter if you are willing to do anything for the travel")
-                
+                Spacer()
                 HStack{
                     Spacer()
-                    Image(systemName: "fork.knife")
-                    Image(systemName: "binoculars.fill")
+                    Image("card2")
+                    Spacer()
+                    Image("card3")
+                    Spacer()
                 }
-                .foregroundColor(.gray)
-                .font(.caption)
+                
+                Spacer()
+                Image("button")
+                
+                Spacer()
+                HStack{
+                    Spacer()
+                    VStack{
+                        Text("Player 1")
+                            .font(.headline)
+                            .padding(.bottom, 10.0)
+                        
+                        Text("0")
+                            .font(.largeTitle)
+                    }
+                    
+                    Spacer()
+                    VStack{
+                        Text("CPU")
+                            .font(.headline)
+                            .padding(.bottom, 10.0)
+                        
+                        Text("0")
+                            .font(.largeTitle)
+                    }
+                    Spacer()
+                }
+                .foregroundColor(.white)
+                Spacer()
+                Spacer()
+                
             }
-            .padding()
-            .background(Rectangle().foregroundColor(.white).cornerRadius(15)
-                .shadow(radius: 15))
-            .padding()
         }
-
-        
     }
 }
 
